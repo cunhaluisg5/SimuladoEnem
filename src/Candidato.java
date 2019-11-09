@@ -6,7 +6,7 @@ public class Candidato {
 	private boolean aprovado;
 	
 	public Candidato() {
-		aprovado = false;
+		aprovado = true;
 	}
 
 	public String getNome() {
