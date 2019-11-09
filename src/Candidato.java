@@ -2,9 +2,9 @@
 public class Candidato {
 	private String nome;
 	private String cidade;
-	private double nota;
+	private float nota;
 	private boolean aprovado;
-	
+
 	public Candidato() {
 		aprovado = true;
 	}
@@ -25,11 +25,11 @@ public class Candidato {
 		this.cidade = cidade;
 	}
 
-	public double getNota() {
+	public float getNota() {
 		return nota;
 	}
 
-	public void setNota(double nota) {
+	public void setNota(float nota) {
 		this.nota = nota;
 	}
 
