@@ -72,7 +72,32 @@ public class Principal {
 	}
 
 	private static void listarCandidatos() {
-
+		for(Candidato c : prova.listarCandidatos()) {
+			if(c.getNota() == 0) {
+				c.setAprovado(false);
+				prova.alterarCandidato(c);
+			}else if(prova.listarCandidatos().size() < prova.getNumVagas()) {
+				if(c.getNota() < 60) {
+					c.setAprovado(false);
+				}else {
+					c.setAprovado(true);
+				}
+				prova.alterarCandidato(c);
+			}
+		}
+		System.out.println("A quantidade de vagas é: " + prova.getNumVagas() + "\n");
+		System.out.println("Candidatos aprovados:\n");
+		for(Candidato c : prova.listarCandidatos()) {
+			if(c.isAprovado()) {
+				System.out.println(c.getNome());
+			}
+		}
+		System.out.println("Candidatos reprovados:\n");
+		for(Candidato c : prova.listarCandidatos()) {
+			if(!c.isAprovado()) {
+				System.out.println(c.getNome());
+			}
+		}
 	}
 
 	private static void exibirPercentual() {
