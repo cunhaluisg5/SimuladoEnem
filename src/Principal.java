@@ -62,7 +62,13 @@ public class Principal {
 	}
 
 	private static void cadastrarVagas() {
-
+		int vagas = 0;
+		while(vagas <= 0) {
+			System.out.println("Informe a quantidade de vagas\n");
+			vagas = scanner.nextInt();
+		}
+		prova.setNumVagas(vagas);
+		System.out.println("Quantidade de vagas cadastrada com sucesso!\n");
 	}
 
 	private static void listarCandidatos() {
